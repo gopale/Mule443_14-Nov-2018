@@ -1,0 +1,49 @@
+MuleSoft.U Development Mule443 4.1 - Snippets
+
+* MODULE 2 **********************************************************
+
+* Salesforce query
+SELECT Name, LastModifiedDate, BillingPostalCode
+FROM Account
+
+
+* MODULE 3 **********************************************************
+
+* American RESTful web service properties
+american:
+  host: "training4-american-api-{lastname}.cloudhub.io"
+  port: "80"
+  basepath: "/"
+  protocol: "HTTP"
+  client_id:
+  client_secret:
+
+* United RESTful web service
+http://mu.learn.mulesoft.com/united/flights
+or if using mulesoft-training-services.jar application:
+http://localhost:9090/united/flights
+
+* Training web service properties
+training:
+  host: "mu.learn.mulesoft.com"
+  port: "80"
+  basepath: "/"
+  protocol: "HTTP"
+
+* Delta SOAP web service WSDL
+http://mu.learn.mulesoft.com/delta?wsdl
+or if using mulesoft-training-services.jar application:
+http://localhost:9191/delta?wsdl
+
+* Delta web service properties
+delta:
+  wsdl: "http://mu.learn.mulesoft.com/delta?wsdl"
+  service: "TicketServiceService"
+  port: "TicketServicePort"
+
+* Validation expression
+#[[SFO,LAX,CLE,PDX,PDF] contains vars.code]
+
+* Validation error message
+#[Invalid destination ++   ++ (vars.code default  )]
+
